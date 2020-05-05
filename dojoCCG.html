@@ -6,43 +6,71 @@
     <title>Document</title>
     <style>
         * {
-            text-align: center;
+            padding: 0;
+            margin: 0;
+            font-family: "Comic Sans MS", cursive, sans-serif;
         }
-        div {
-            border: 2px solid black;
-            text-align: center;
-            margin: 5px;
-            padding: 10px
+        div{
+            border: black solid 1px;
+            box-sizing: border-box;
+        }
+        .desk{
+            display: flex;
+            justify-content: space-evenly;
+            padding: 20px;
+        }
+        .container {
+            width: 300px;
+            height: fit-content;
+        }
+        .unit{
+            background-color: #0086AE;
+        }
+        .unit .title{
+            background-color: #87BAE5;
         }
 
-        .container {
-            margin: 0 auto;
-            width: 250px;
-            height 450px;
+        .effect{
+            background-color: #C7254E;
+        }
+        .effect .title{
+            background-color: #F36870;
         }
 
         .title {
-            width: 200px;
+            width: 300px;
+            min-width: fit-content;
             height: 50px;
         }
-
         .picture {
-            width: 200px;
+            width: 280px;
+            min-width: fit-content;
             height: 200px;
+            margin: 10px;
+            background-color: white;
         }
-
         .text {
-            width: 200px;
+            width: 280px;
+            min-width: fit-content;
             height: 200px;
+            margin: 10px;
+            background-color: #A7A3A3;
         }
     </style>
 </head>
 <body>
     <h1>Welcome to the Card Game</h1>
-    <div class="container">
-        <div class="title">Title</div>
-        <div class="picture">Image Placeholder</div>
-        <div class="text">Text Placeholder</div>
+    <div class="desk">
+        <div class="container unit">
+            <div class="title"></div>
+            <div class="picture">Image Placeholder</div>
+            <div class="text">Text Placeholder</div>
+        </div>
+        <div class="container effect">
+            <div class="title"></div>
+            <div class="picture"><p>Image Placeholder<p></div>
+            <div class="text"><p>Text Placeholder<p></div>    
+        </div>
     </div>
     <script>
         class Card {
